@@ -1,0 +1,334 @@
+/* Asosiy o'zgaruvchilar (O'zbekiston bayrog'i motivlari) */
+:root {
+    /* Light Mode */
+    --bg-color: #F8FAFC;
+    --surface-color: #FFFFFF;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --border-color: #E2E8F0;
+    
+    /* Bayroq motivlari (Zamonaviy UI uchun biroz yumshatilgan) */
+    --primary-blue: #009BD8; /* Havorang */
+    --primary-green: #10B981; /* Yashil */
+    --primary-red: #EF4444; /* Qizil aksentlar uchun */
+    --white: #FFFFFF;
+
+    --btn-primary-bg: var(--primary-blue);
+    --btn-primary-text: var(--white);
+    
+    --transition: all 0.3s ease;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+    --bg-color: #0F172A;
+    --surface-color: #1E293B;
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --border-color: #334155;
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    transition: var(--transition);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- Tugmalar --- */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: #007AA5;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+.btn-secondary:hover {
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+}
+
+.btn-large {
+    padding: 14px 28px;
+    font-size: 16px;
+}
+
+.btn-icon {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+/* --- Navigatsiya --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--surface-color);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary-blue);
+}
+
+.logo-icon {
+    width: 16px;
+    height: 16px;
+    background-color: var(--primary-green);
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 6px 0 0 var(--primary-red);
+}
+
+.nav-links {
+    display: none; /* Mobile-first: yashirin */
+    gap: 24px;
+}
+
+.nav-links a:hover {
+    color: var(--primary-blue);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.mobile-menu-btn {
+    display: block;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: var(--text-primary);
+}
+
+/* --- Hero Section --- */
+.hero {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: rgba(16, 185, 129, 0.1);
+    color: var(--primary-green);
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.highlight {
+    color: var(--primary-blue);
+}
+
+.hero p {
+    color: var(--text-secondary);
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* --- Statistika --- */
+.stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    background-color: var(--surface-color);
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.stat-number {
+    font-size: 32px;
+    color: var(--primary-blue);
+    margin-bottom: 8px;
+}
+
+/* --- Modullar --- */
+.modules-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    color: var(--text-secondary);
+}
+
+.modules-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.module-card {
+    background-color: var(--surface-color);
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.module-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.mod-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.mod-icon.blue { background: rgba(0, 155, 216, 0.1); color: var(--primary-blue); }
+.mod-icon.green { background: rgba(16, 185, 129, 0.1); color: var(--primary-green); }
+.mod-icon.red { background: rgba(239, 68, 68, 0.1); color: var(--primary-red); }
+
+.module-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.module-card p {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--surface-color);
+    border-top: 1px solid var(--border-color);
+    margin-top: 60px;
+}
+
+footer p {
+    color: var(--text-secondary);
+    margin-top: 10px;
+}
+
+/* --- Responsive (Planshet va Kompyuterlar uchun) --- */
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+    }
+    
+    .mobile-menu-btn {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .modules-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .stats {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .modules-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
